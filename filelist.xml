@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Shield's scuffed Armory" modversion="1.0.0" corepackage="False"  gameversion="0.19.11.0">
+  <Item file="%ModDir%/Items/Weapons/shield_weapons.xml" />
+  <Afflictions file="%ModDir%/Afflictions.xml" />
+  <Text file="%ModDir%/Texts/EnglishShieldArmory.xml" />
+</contentpackage>
