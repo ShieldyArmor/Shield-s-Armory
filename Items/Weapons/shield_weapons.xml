@@ -38,9 +38,9 @@
       <RequiredItem identifier="plastic"/>
       <RequiredItem identifier="shield_coilgunshotgunammobox" mincondition="0.0" maxcondition="0.5" usecondition="false" />
     </Fabricate>
-    <Sprite texture="%ModDir%/Items/Weapons/shield_coilgunshotgunammobox.png" depth="0.54" sourcerect="0,0,95,78" origin="0.5,0.5" />
-    <ContainedSprite allowedcontainertags="coilgunammocontainer,ammoboxcontainer,crateshelf,ammocontainer" allowedcontaineridentifiers="coilgunammoshelf,crateshelf,ammocontainer" texture="%ModDir%/Items/Weapons/shield_coilgunshotgunammobox.png" depth="0.54" sourcerect="0,0,95,78" origin="0.5,0.5" />
-    <ContainedSprite allowedcontainertags="coilgunequipment" texture="%ModDir%/Items/Weapons/shield_coilgunshotgunammobox.png" depth="0.54" sourcerect="0,0,95,78" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Weapons/shield_ammocontainers.png" depth="0.54" sourcerect="0,0,95,78" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="coilgunammocontainer,ammoboxcontainer,crateshelf,ammocontainer" allowedcontaineridentifiers="coilgunammoshelf,crateshelf,ammocontainer" texture="%ModDir%/Items/Weapons/shield_ammocontainers.png" depth="0.54" sourcerect="0,0,95,78" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="coilgunequipment" texture="%ModDir%/Items/Weapons/shield_ammocontainers.png" depth="0.54" sourcerect="0,0,95,78" origin="0.5,0.5" />
     <Body width="100" height="80" density="50" />
     <Holdable slots="RightHand+LeftHand" holdpos="50,-20" handle1="-15,33" handle2="-15,33" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true">
       <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.4" setvalue="true" />
@@ -51,6 +51,56 @@
         <SpawnItem identifiers="shotgunshell" spawnposition="ThisInventory" />
       </StatusEffect>
       <Containable identifiers="shotgunshell" />
+    </ItemContainer>
+  </Item>
+
+    <!-- COILGUN URANIUM ROD AMMUNITON BOX -->
+  <Item name="" identifier="shield_uraniumrodcoilgunammobox" aliases="Shield's scuffed Shotgun Coilgun ammo box" scale="0.5" tags="coilgunequipment,coilgunammo,extendedcoilgunammo,crate,ammobox" category="Equipment,Weapon" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="coilgunammocontainer,ammocontainer" />
+    <PreferredContainer primary="wreckcoilgun" spawnprobability="0.05" />
+    <Price baseprice="350" soldeverywhere="false">
+      <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="3"/>
+      <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="6" sold="false"/>
+      <Price storeidentifier="merchantresearch" multiplier="1.3" minavailable="3"/>
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="15"/>
+      <Price storeidentifier="merchantmine" multiplier="1.2" minavailable="3"/>
+      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="15"/>
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="lead" mincondition="0.95"/>
+      <Item identifier="plastic" mincondition="0.95" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35">
+      <RequiredSkill identifier="weapons" level="25"/>
+      <RequiredSkill identifier="electrical" level="45" />
+      <RequiredItem identifier="fuelrod" amount="24" />
+      <RequiredItem identifier="fulgurium" amount="2" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="35">
+    <RequiredSkill identifier="weapons" level="20"/>
+      <RequiredItem identifier="fuelrod" amount="24" />
+      <RequiredItem identifier="fulgurium" amount="1" />
+      <RequiredItem identifier="shield_uraniumrodcoilgunammobox" mincondition="0.0" maxcondition="0.5" usecondition="false" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Items/Weapons/shield_ammocontainers.png" depth="0.54" sourcerect="120,0,95,78" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="coilgunammocontainer,ammoboxcontainer,crateshelf,ammocontainer" allowedcontaineridentifiers="coilgunammoshelf,crateshelf,ammocontainer" texture="%ModDir%/Items/Weapons/shield_ammocontainers.png" depth="0.54" sourcerect="120,0,95,78" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="coilgunequipment" texture="%ModDir%/Items/Weapons/shield_ammocontainers.png" depth="0.54" sourcerect="120,0,95,78" origin="0.5,0.5" />
+    <Body width="100" height="80" density="50" />
+    <Holdable slots="RightHand+LeftHand" holdpos="50,-20" handle1="-15,33" handle2="-15,33" aimable="false" msg="ItemMsgPickUpSelect" canBeCombined="true">
+      <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.4" setvalue="true" />
+    </Holdable>
+    <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
+      <StatusEffect type="OnUse" target="This" condition="-1" disabledeltatime="true">
+        <SpawnItem identifiers="nucleargunbolt" spawnposition="ThisInventory" />
+        <Sound file="Content/Items/JobGear/Engineer/WEAPONS_rapidFissileAccelerator.ogg" range="3000" spawnposition="ThisInventory" selectionmode="Random" />
+        <Sound file="Content/Items/JobGear/Engineer/WEAPONS_rapidFissileAccelerator2.ogg" range="3000" spawnposition="ThisInventory"/>
+        <Sound file="Content/Items/JobGear/Engineer/WEAPONS_rapidFissileAccelerator3.ogg" range="3000" spawnposition="ThisInventory"/>
+        <Sound file="Content/Items/JobGear/Engineer/WEAPONS_rapidFissileAccelerator4.ogg" range="3000" spawnposition="ThisInventory"/>
+      </StatusEffect>
+      <Containable identifiers="nucleargunbolt" />
     </ItemContainer>
   </Item>
 

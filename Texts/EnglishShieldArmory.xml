@@ -2,4 +2,6 @@
 <infotexts language="English" nowhitespace="false" translatedname="English">
   <entityname.shield_coilgunshotgunammobox>Coilgun Shotgun Ammunition box</entityname.shield_coilgunshotgunammobox>
   <entitydescription.shield_coilgunshotgunammobox>This handcrafted coilgun ammo-box was designed by Shield to provide the experience of being able to rip and tear fish and foes alike.</entitydescription.shield_coilgunshotgunammobox>
+  <entityname.shield_uraniumrodcoilgunammobox>Coilgun fuel rod Ammunition box</entityname.shield_uraniumrodcoilgunammobox>
+  <entitydescription.shield_uraniumrodcoilgunammobox>This handcrafted coilgun ammo-box was designed by Shield's engineering team to put use to useless uranium fuel rods.</entitydescription.shield_uraniumrodcoilgunammobox>
 </infotexts>
