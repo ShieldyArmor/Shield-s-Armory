@@ -4,4 +4,6 @@
   <entitydescription.shield_coilgunshotgunammobox>This handcrafted coilgun ammo-box was designed by Shield to provide the experience of being able to rip and tear fish and foes alike.</entitydescription.shield_coilgunshotgunammobox>
   <entityname.shield_uraniumrodcoilgunammobox>Coilgun fuel rod Ammunition box</entityname.shield_uraniumrodcoilgunammobox>
   <entitydescription.shield_uraniumrodcoilgunammobox>This handcrafted coilgun ammo-box was designed by Shield's engineering team to put use to useless uranium fuel rods.</entitydescription.shield_uraniumrodcoilgunammobox>
+  <entityname.shield_healthscanner>Diving mask with intergrated Health Scanner HUD</entityname.shield_healthscanner>
+  <entitydescription.shield_healthscanner>This makeshift diving mask allows the user to benefit from the HUD Scanner while wearing a smart-breathing divingmask, not to mention the adjustable strap on the back to hold any small items you wish to keep close.</entitydescription.shield_healthscanner>
 </infotexts>

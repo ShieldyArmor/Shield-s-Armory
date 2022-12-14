@@ -47,7 +47,7 @@
     </Holdable>
     <ItemContainer autofill="False" hideitems="true" capacity="1" maxstacksize="1" removecontaineditemsondeconstruct="true" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="16,64,120,24" />
-      <StatusEffect type="OnUse" target="This" condition="-0.25" disabledeltatime="true">
+      <StatusEffect type="OnUse" target="This" condition="-1" disabledeltatime="true">
         <SpawnItem identifiers="shotgunshell" spawnposition="ThisInventory" />
       </StatusEffect>
       <Containable identifiers="shotgunshell" />
